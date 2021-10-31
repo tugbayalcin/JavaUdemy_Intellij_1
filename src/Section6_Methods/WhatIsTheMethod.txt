@@ -1,0 +1,75 @@
+
+
+            METHODS
+
+Method Nedir ve Ne İcin Kullanilir
+
+Methodlar (yordamlar); bir kod blogunun belli bir isi yapmak icin bir araya gelmesiyle olıusur
+
+Methodlari kullanarak buyuk problemleri kucuk parcalara ayirabilir, gereksiz kod kalabaligindan kurtulabiliriz
+
+Ornegiz 1'den 10a kadar olan sayilarin toplamini, 30'dan 60'a kadar olan sayilarin toplamini sirasiyla yazdirin deseler ne yapardiniz?
+
+Eger methodlari bilmiyorsaniz bu problem icin iki farkli for dongusu olısturup islem yapmaniz gerekir.
+Peki bu problem iki degil 10 farkli istek icerirse ne yapacaksiniz?
+10 tane for dongusu olusturmak ne kadar mantikli?
+
+Yukaridaki  ornekte farkindaysaniz yapilan is aynidir. Baslangic ve bitis degeri bilinen bir sayi aealigindaki sayilari toplamak
+
+Burada methodlar yardimimiza kosuyor. Sadece tek bir method tanimlayarak farkli parametreler kullanarak istedigimiz kadar islem yapabiliriz
+
+Tek yapmamiz gereken methodun tanimlamak ve gerektigi yerde uygun parametreler ile cagirip kullanmak olacaktir
+
+Farkli method turleri bulunmaktadir. Bu bolumde sunlari gorecegiz:
+
+PARAMETRESİZ METHODLAR: Parametre almayan ve deger dondurmeyen methodlardir.
+void selamla()   // parantez icine herhangi bir sey yazilmiyor
+{ System.out.primtln( "Merhabalar , Nasilsin?"); }
+
+PARAMETRE ALAN METHODLAR: Girdi olarak bazi degerler alir ve bunlara bagli olarak islem yapar
+void topla (int s1, int s2)
+{ System.out.primtln("Parametrelerin Toplami: " + (s1 + s2));}
+
+DEGER DONDUREN METHODLAR: Cagirildiklari yere bazi degerleri donduren methodlardir.
+int toplam = toplamiBul(3,5); // methoda 3 ve 5 parametrelerini geciyoruz
+                              // s1'e 3, s2'ye 5 degerleri atanir.
+int toplamiBul(int s1, int s2)
+{return s1 + s2; }    // bu degerlerin toplamini return ile methodun cagirildigi yere gondeririz
+                      // bundan dolayi s1+s2 sonucu tanimlanan toplam degiskenine atanir
+
+
+METHOD TANIMLAMA
+
+                        donus tipi
+                          |                / parametre listesi  \
+   public     static     int      topla    (int sayi1 , int sayi22)
+                                  | |               |    |                         \
+                                  | method adi   formal parametreler                \
+                                  |                                                  \
+   { return sayi1 + sayi2 }       | method signature - method adi + parametre listesi \
+             |
+   geriye dondurulecek deger
+
+
+
+BU METHODU CAGIRIRKEN;
+Adini ve parametresini vermemzi yeterlidir
+int toplam = topla(5,8); // buradaki 5 ve 8 ACTUAL PARAMETER veya ARGUMENTS
+
+!!! Eger methoda degisken gonderirsek bu degiskenlerin degerleri methoda gonderilir !!!
+
+int toplam = topla(sayi1,sayi2); // Methoda sayi1 ve sayi2 nin sakladiklari degerler gonderilir
+                                 // Yani method icerisinde sayi1 ve sayi22 nin degerlerini degistirsek bile bunlar asil olan
+                                 // sayi1 ve sayi2 degiskenlerine yansimayacaktir
+                                 // ( pass by value-deger yollama )
+
+Geriye deger dondurmeyen methodların donus tipi VOID olur
+
+
+
+alt enter ( benim icin olusturuyor)
+ctrl / : secili satirlari yorum satirina donusturuyor
+ctrl shift / : secili satirlari yorum bloguna donunsturuyor
+
+SİGNATURE
+Bir methodun geri donus tipi (void,int, double, etc...) signature kavramina dahil degildir

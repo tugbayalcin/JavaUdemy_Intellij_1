@@ -1,0 +1,41 @@
+
+                                Java General Info
+
+1. // line comment
+
+2. /*
+block commment
+   */
+
+3. Reserved word: yazdigimizda turuncu renk yanan, spesifik gorevler icin belirlenmis kelimelerdir. Public, static, void etc
+
+4. {} parantez icerisinde kalan kisma kod blogu denir
+
+5. Garbage Collector: Tanimlanmis ve kullanılmayan verilerin bellekte fazla yer kaplamasini engellemek amaci ile onlari silip temizleyen sey
+
+6. int t; // declaration-tanimlama
+   t= 10; // Initializing-baslatma / assign a value- bir deger atama
+
+
+Veri Turleri 2'ye ayrılır: 1. Primitive Data Types-Ilkel Veri Turleri --> int, boolean , byte , char , short , long , float ve double
+                           2. Object Types-Nesneler (Ilkel veri turleri haric her sey) --> Diziler ve Siniflar
+                                 Referans Turleri
+                                 Ilkel Olmayan Veri Turleri
+                                 Kompleks Veri Turleri
+                                 diye de bilinirler
+
+
+MEMORIES
+1) STACK (YIGIN)
+Primitive Type(Ilkel Tur) dil tarafindan onceden tanimlanmistir
+Ayrılmıs (Reserved Keyword) bir anahtar sozcukle adlandirilir (int, double, short etc..)
+Primitive Data Type nesne olarak kabul edilmediginden dogrudan stack uzerine depolanir
+(Nesneler ise dogrudan heap adi verilen ozel bir alanda depolanir)
+
+2) HEAP
+   https://hasancelik.org/java-hafiza-yonetimi/Java-memory-models-objects/
+
+   //<editor-fold desc="PrimitiveDataTypes">
+   //</editor-fold>
+
+

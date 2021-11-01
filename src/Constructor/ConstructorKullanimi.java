@@ -4,7 +4,7 @@ public class ConstructorKullanimi
 {
 
     String name="Tuba";//githubtan ilk editimi yapip commitliyorum
-    String sName;
+    String sName;//git'te degisiklik yapip + commitledim -> github'a pushlamak icin
     int number=12345;
     String programName;
 

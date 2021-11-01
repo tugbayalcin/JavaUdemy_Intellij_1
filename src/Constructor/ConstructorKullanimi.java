@@ -3,7 +3,7 @@ package Constructor;
 public class ConstructorKullanimi
 {
 
-    String name="Tuba";
+    String name="Tuba";//githubtan ilk editimi yapip commitliyorum
     String sName;
     int number=12345;
     String programName;

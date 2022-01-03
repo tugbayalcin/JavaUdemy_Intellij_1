@@ -27,10 +27,12 @@ public class YaziciSinif
     // sinifimin icindeki siniflar
     class StringDiziYazdir
     {
+
         private int privateDegiskenInner = 1;
         int defaultDegiskenInner = 2;
         protected int protectedDegiskenInner = 3;
         public int publicDegiskenInner = 4;
+
 
         // static int sayi = 5;
         // inner classlar static declaration a sahip olamazlar
@@ -44,11 +46,13 @@ public class YaziciSinif
             System.out.println(defaultDegisken); // default degiskene de eristim
             System.out.println(protectedDegisken); // zaten private a erisiyorsam bunlara rahatlikla erisebilirim
             System.out.println(publicDegisken); // private a erisip digerlerine erisememe gibi bir durum olamaz
+            // outer class'daki erisim belirteci ne olursa olsun tum degiskenelre erisebildim
 
             privateMethod(); // methodlara da erisim saglayabiliyorum
             defaultMethod();
             protectedMethod();
             publicMethod();
+            // outer class'daki erisim belirteci ne olursa olsun tum methodlara da erisebildim
 
             for(String gecici:dizi)
             {

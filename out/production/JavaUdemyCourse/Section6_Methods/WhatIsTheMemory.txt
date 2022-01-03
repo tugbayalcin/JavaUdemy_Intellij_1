@@ -1,0 +1,37 @@
+
+
+
+        **********      MEMORY          **********
+
+Tanimladigimiz degiskenler, nesneler, dizlier asagidaki yapilarda tutulur
+
+YIGIN(STACK): Bellekte yani RAM'de bulunur. Oldukca hizli calisan, dogrudan islemciden donanim destegine sahip olan alandir.
+Java derleyicisi program olusturulmadan once buraya konulacak verileri ve buyukluklerini bilmelidir. Ilkel veri tipleri
+o yuzden burada tututlur. Cunku hepsinin bellekte tutacagi alan sabit ve ellidir. Ama dizi veya nesnelerin ne kadar yer
+tutacagi belli olmadigi icin burada sadece referanslari yer alir. Bu referanslarin degerleri ise heap alaninda bulunan
+gercek degerin adres bilgisidir.
+
+// yıgın deyince aklimiza ust uste dizilmis tabaklar gelsin :)
+
+// new demek hey java ben bir şeyler saklayacagim bana heap alanindan ir yer ver demek
+
+// bellekte ne kadar yer kaplayacagi belli olan veri tipleri : PRIMITIVE VERI TIPI
+// bellekte ne kadar yer kaplayacagi belli olmayan veri tipleri : REFERANCE VERI TIPI
+// string ise bu ikisi arasinda kalşan ekstra ozellesmis bir veri tipidir
+
+
+HEAP: Derleyici buradaki degerlerin ne kadar bellek ihtiyaci oldugunu bilmek zorunda degildir. Biz ne zaman new deyip
+yeni bir dizi veya nesne olusturmak istersek bu alanda bize yer verilir. Diziler veya nesnelerin gercek degerleri burada
+saklanir. Bu ozgurluklerin bize maliyeti ise yigina gore daha yavas olmasidir.
+
+// dizi tanimlarken her ne kadar kac eleman tutacagini onceden soylesek de, diziler stack memory'de degil heap memory'de
+   tutulur, stack'da adres(referance) bilgisi yer alir
+
+// dizi bir kere tanimlanir, sonrasinda dizideki elemanlari degistirebilirsiniz ancak tutacagi eleman sayisini degistiremezsiniz
+   degistirmek istedigimizde yepyeni bir dizi olusmus olur ve eskisinin referance bilgisi stack'tan silinir.
+   boylece heap'de bir daha asla erisemeyecegim, elimde artik adresi bulunmayan bir alan kalmis olur.
+   bu alan da javanin cop temizleyicisi GARBAGE COLLECTOR tarafindan silinir ve hafizada yeniden yer acilmasi saglanir geri gel
+
+STATİK ALAN:
+
+SABİT DİSK:

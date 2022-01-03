@@ -79,6 +79,18 @@ public class TypeOfCasting_InstanceOf
             sekil.alanHesapla();
             System.out.println("Geometrik sekil icindeki alan hesapla cagirildi.");
         }
+        // instance of kullanirken if (sekil instanceof GeometrikSekil) diye baslasaydik
+        // kodumuz daima geometrik sekildeki alanHesapla methodunu cagiracakti.
+        // Cunku en nihayetinde verdigimiz her sekil de bir geometrik sekil olacakti ve kodumuz istedigimiz sonucu vermeyecekti
+        // bunu onlemek icin daima en ust classimizi en son kosul olarak yazmaliyiz.
+        // hatta dikdortgen de karenin ustunde olamaz, yoksa kare de bir dikdortgen oldugu icin, ondan kalitildigi icin
+        // kare kosuluna gecemeden dikdortgen icerisindeki alanHesapla() methodu calistirilirdi
+        // burada kalitilan her sinif icin bir else if blogu olusturmak zorunda oldugumuz icin bir kod karmasasi olusacakti
+        // hatta ben yeni classlar uretip bunlari da geometrik sekilden inherit etmek istesem,
+        // polymorphism olmadiginda onlari da else if bloklarina eklemem gerecekekken
+        // polymorphism olddugunda hicbir sey yapmadan dogrudan alanHesapla() methodunu kullanabilecektim
+        // bu yuzden iyi ki polymorphism var
+
 
 
     }

@@ -1,0 +1,52 @@
+
+
+************   ARRAYS-DIZILER   *********
+
+Icerisinde belli sayida ve ayni turde veri olan yapilara dizi denir. Siz eger 10 tane integer degeribir arada tutmak
+istiyorsaniz 10 farkli degisken tanimlamak yerine bir dizi olıusturup kullanabilirsiniz
+
+Diziler primitive veya referans tip veri turlerini barindirabilir. Tek sart bir dizi ayni turde elemanlari icermelidir
+
+Java’da diziler, diğer dillerden farklı olarak bir nesne(obje) olarak karşımıza çıkar. Bu sahip olduğu özellik ile bizlere
+daha yüksek bir performans ve güvenlik sağlar.
+
+Dizi turundeki refesanslar dizi nesnelerine baglanir. (Nesne ?) Dizi referans degerleri stack yapisinda, dizi nesneleri
+ise heap alaninda tutulur
+
+Javada array olustururken yapacagimiz tanimlama su sekildedir:
+     veriTipi [] diziAdi = new veriTipi[eleman sayisi];
+
+Asagidaki dizi tanimlamalarinin hepsi dogrudur
+        double[] a = new double[10]; --> 10 tane double deger tutacak dizi
+        int []b = new int[10];       --> 10 tane integer deger tutacak dizi
+        float c[] = new float[10];    --> 10 tane float deger tutacak dizi
+
+Bu diziler olusturuldugunda heap alaninda 10 adet deger saklayacak bir alan olusturulur ve bu alana da veri tiplerinin
+varsayilan degerleri atanir
+
+Programımız için ileride kullanacağımız eleman sayısı belli olmayan bir dizi referansı oluşturmak isteyebiliriz.
+Bu dizi referansını şu şekilde tanımlayabiliriz:
+        veriTipi diziAdı[elemanSayısı]; // Örnek: String isimler[];
+
+Bir diziyi tanimladiktan sonra veri atamak icin
+int []b = new int [10];
+b[0]=5  --> dizinin 0. indeksine 5 degeri atandi
+
+Dizide index degerleri 0'dan baslar. Yani dizinin ilk elemani 0. elemandir. O yuzden maksimum index degeri dizinin eleman
+sayisinin 1 eksigi kadardir. Bu siniri astiginizda ArrayIndexBoundException hatasi alirsiniz
+
+Ayrica double[] veriler = {3,4, 5,1, 2,3} seklinde de diziyi olusturabilirsiniz.
+
+Dizideki elemanlari gezmek ve kullanmak icin genellikle for dongusu kullanilir.
+
+10 elemanli integer bir dizideki tüm elemanlari yazdirirsak;
+for(int i=0;i<dizi.length;i++)
+        {
+            System.out.println(i + ". Indeksteki Elemaani: " + dizi[i]);
+        }
+
+Dizi bir kere tanimlanir, sonrasinda dizideki elemanlari degistirebilirsiniz ancak tutacagi eleman sayisini degistiremezsiniz
+
+int sayilar [] = new int[10];   --> 10 elemanli integer bir dizi olusturulur
+sayilar = new int[15];          --> eski sayilar dizisi silinip yenisi olusturulur
+Burada dizinin genisleyebilecegi dusunulmemelidir, tamamen yepyeni bir dizi olustu.
